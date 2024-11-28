@@ -1,0 +1,160 @@
+[gd_scene load_steps=17 format=3 uid="uid://d6cfy7yi2f2p"]
+
+[ext_resource type="Script" path="res://ConnectButton.gd" id="2_y6c21"]
+[ext_resource type="Script" path="res://Scropts/twitch_chat.gd" id="3_ppkqf"]
+[ext_resource type="Script" path="res://Scropts/speed_button.gd" id="4_n4235"]
+[ext_resource type="Script" path="res://ChatScroll.gd" id="4_qmaeh"]
+[ext_resource type="PackedScene" uid="uid://4h12mcnnr3y8" path="res://levels/level_1.tscn" id="5_8e80v"]
+[ext_resource type="ButtonGroup" uid="uid://bka52nvnetary" path="res://button_group.tres" id="5_j3yd1"]
+[ext_resource type="Script" path="res://Scropts/Game.gd" id="5_vg1oa"]
+[ext_resource type="PackedScene" uid="uid://bx8daw27rq1ci" path="res://levels/level_2.tscn" id="6_jgwln"]
+[ext_resource type="PackedScene" uid="uid://c7h4bddy8re1e" path="res://levels/level_3.tscn" id="8_h7i0i"]
+[ext_resource type="PackedScene" uid="uid://1ea0iijv7ax1" path="res://levels/level_8.tscn" id="8_u0oow"]
+[ext_resource type="PackedScene" uid="uid://bf42ia67ix1po" path="res://levels/level_4.tscn" id="10_w27vh"]
+[ext_resource type="PackedScene" uid="uid://cbingq1bfo8sm" path="res://levels/level_5.tscn" id="11_10jae"]
+[ext_resource type="PackedScene" uid="uid://b05pox4uv67dq" path="res://levels/level_6.tscn" id="12_bt2w4"]
+[ext_resource type="PackedScene" uid="uid://doyvm0cjtongx" path="res://levels/level_last.tscn" id="13_bxfaj"]
+[ext_resource type="PackedScene" uid="uid://cr6us4y4xnbdg" path="res://levels/level_7.tscn" id="13_igdm2"]
+[ext_resource type="PackedScene" uid="uid://c5wgl4uy03iw4" path="res://levels/level_almost_last.tscn" id="14_36ble"]
+
+[node name="World" type="Node2D"]
+
+[node name="TwitchChat" type="Node" parent="."]
+unique_name_in_owner = true
+script = ExtResource("3_ppkqf")
+
+[node name="UI" type="Node" parent="."]
+
+[node name="ChannelLabel" type="Label" parent="UI"]
+offset_left = 2.0
+offset_top = 7.0
+offset_right = 123.0
+offset_bottom = 30.0
+text = "Channel"
+
+[node name="ChannelInput" type="LineEdit" parent="UI"]
+unique_name_in_owner = true
+offset_left = 2.0
+offset_top = 34.0
+offset_right = 241.0
+offset_bottom = 65.0
+tooltip_text = "Leave blank if same as username"
+focus_mode = 1
+text = "essie_ch"
+
+[node name="ConnectButton" type="Button" parent="UI"]
+unique_name_in_owner = true
+offset_left = 6.0
+offset_top = 77.0
+offset_right = 78.0
+offset_bottom = 108.0
+focus_mode = 0
+text = "Connect"
+script = ExtResource("2_y6c21")
+
+[node name="ChatScroll" type="RichTextLabel" parent="UI"]
+unique_name_in_owner = true
+offset_left = 1.0
+offset_top = 365.0
+offset_right = 239.0
+offset_bottom = 898.0
+scroll_following = true
+script = ExtResource("4_qmaeh")
+
+[node name="FasterButton" type="Button" parent="UI"]
+offset_left = 6.0
+offset_top = 124.0
+offset_right = 71.0
+offset_bottom = 155.0
+focus_mode = 0
+text = "FASTER"
+script = ExtResource("4_n4235")
+speed = 0.1
+
+[node name="SlowerButton" type="Button" parent="UI"]
+offset_left = 80.0
+offset_top = 124.0
+offset_right = 145.0
+offset_bottom = 155.0
+focus_mode = 0
+text = "Slower"
+script = ExtResource("4_n4235")
+speed = -0.1
+
+[node name="Polygon2D" type="Polygon2D" parent="UI"]
+z_index = -1
+color = Color(0.370364, 0.370364, 0.370364, 1)
+polygon = PackedVector2Array(0, 0, 300, 0, 300, 900, 0, 900)
+
+[node name="UnlockButton" type="Button" parent="UI"]
+offset_top = 254.0
+offset_right = 95.0
+offset_bottom = 285.0
+focus_mode = 0
+text = "Unlock Exit"
+
+[node name="SkipButton" type="Button" parent="UI"]
+offset_left = 108.0
+offset_top = 254.0
+offset_right = 203.0
+offset_bottom = 285.0
+focus_mode = 0
+text = "Skip Level"
+
+[node name="ResetButton" type="Button" parent="UI"]
+offset_top = 291.0
+offset_right = 96.0
+offset_bottom = 322.0
+focus_mode = 0
+text = "Reset Level"
+
+[node name="DemocracyButton" type="CheckBox" parent="UI"]
+offset_top = 169.0
+offset_right = 183.0
+offset_bottom = 200.0
+focus_mode = 0
+button_pressed = true
+button_group = ExtResource("5_j3yd1")
+text = "Democracy Mode"
+
+[node name="AnarchyButton" type="CheckBox" parent="UI"]
+offset_top = 200.0
+offset_right = 183.0
+offset_bottom = 231.0
+focus_mode = 0
+button_group = ExtResource("5_j3yd1")
+text = "Anarchy Mode"
+
+[node name="SpeedLabel" type="Label" parent="UI"]
+offset_left = 162.0
+offset_top = 129.0
+offset_right = 202.0
+offset_bottom = 152.0
+text = "1.0"
+
+[node name="Chatspeed" type="Label" parent="UI"]
+offset_left = 116.0
+offset_top = 83.0
+offset_right = 207.0
+offset_bottom = 106.0
+text = "Chat speed:"
+
+[node name="Chatspeednum" type="Label" parent="UI"]
+offset_left = 217.0
+offset_top = 84.0
+offset_right = 269.0
+offset_bottom = 107.0
+text = "0"
+
+[node name="Game" type="Node2D" parent="."]
+unique_name_in_owner = true
+script = ExtResource("5_vg1oa")
+levels = Array[PackedScene]([ExtResource("5_8e80v"), ExtResource("6_jgwln"), ExtResource("8_h7i0i"), ExtResource("10_w27vh"), ExtResource("11_10jae"), ExtResource("12_bt2w4"), ExtResource("13_igdm2"), ExtResource("8_u0oow"), ExtResource("14_36ble"), ExtResource("13_bxfaj")])
+
+[node name="Level1" parent="Game" instance=ExtResource("5_8e80v")]
+position = Vector2(300, 0)
+
+[connection signal="pressed" from="UI/ConnectButton" to="TwitchChat" method="_on_button_pressed"]
+[connection signal="pressed" from="UI/UnlockButton" to="Game" method="_on_open_clicked"]
+[connection signal="pressed" from="UI/SkipButton" to="Game" method="_on_skip_clicked"]
+[connection signal="pressed" from="UI/ResetButton" to="Game" method="_on_reset_button_pressed"]

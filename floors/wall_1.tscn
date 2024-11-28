@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=3 uid="uid://b4klga03s2olr"]
+
+[ext_resource type="PackedScene" uid="uid://b4xmadyemigen" path="res://pickup.tscn" id="1_l2qf4"]
+[ext_resource type="SpriteFrames" uid="uid://cgtynm3f5rwh6" path="res://tiles.tres" id="2_udm50"]
+[ext_resource type="Script" path="res://floors/reorienter.gd" id="3_rvn07"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3kfed"]
+size = Vector2(21, 100)
+
+[node name="WallH" type="StaticBody2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(60, 0)
+rotation = 3.1416
+shape = SubResource("RectangleShape2D_3kfed")
+
+[node name="Floor" type="Polygon2D" parent="."]
+position = Vector2(-50, -50)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, 0, 100, 100, 100, 100, 0)
+
+[node name="Pickup" parent="." instance=ExtResource("1_l2qf4")]
+collision_layer = 4
+collision_mask = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("2_udm50")
+frame = 6
+speed_scale = 0.0
+script = ExtResource("3_rvn07")

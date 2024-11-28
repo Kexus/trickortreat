@@ -1,0 +1,81 @@
+[gd_scene load_steps=8 format=3 uid="uid://c5wgl4uy03iw4"]
+
+[ext_resource type="PackedScene" uid="uid://b7ecs4qb0q41g" path="res://floors_old/wall_end.tscn" id="1_xfyel"]
+[ext_resource type="PackedScene" uid="uid://cjqt41et4qa45" path="res://floors_old/EmptyFloors/empty_wall_end.tscn" id="2_sw63g"]
+[ext_resource type="PackedScene" uid="uid://cr0fo17eaqltm" path="res://floors_old/EmptyFloors/empty_wall_v.tscn" id="3_1dvkn"]
+[ext_resource type="PackedScene" uid="uid://upqp6dlgjtjq" path="res://floors_old/EmptyFloors/empty_wall_l.tscn" id="4_yk1i1"]
+[ext_resource type="PackedScene" uid="uid://b8jg85xquocal" path="res://floors_old/EmptyFloors/empty_wall_h.tscn" id="5_tw5c3"]
+[ext_resource type="PackedScene" uid="uid://dtvm4uxkjcder" path="res://Player.tscn" id="7_4pf0q"]
+[ext_resource type="PackedScene" uid="uid://d1rkwatxx2ohi" path="res://lawnmower.tscn" id="7_np3ob"]
+
+[node name="Level5" type="Node2D"]
+
+[node name="Walls" type="Node2D" parent="."]
+position = Vector2(400, 100)
+
+[node name="Player" parent="." instance=ExtResource("7_4pf0q")]
+unique_name_in_owner = true
+position = Vector2(400, 200)
+safe_margin = 0.001
+
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="WallH" parent="." instance=ExtResource("2_sw63g")]
+position = Vector2(400, 200)
+rotation = -1.5708
+
+[node name="WallV" parent="." instance=ExtResource("3_1dvkn")]
+position = Vector2(400, 300)
+
+[node name="WallV2" parent="." instance=ExtResource("3_1dvkn")]
+position = Vector2(400, 400)
+
+[node name="WallV3" parent="." instance=ExtResource("3_1dvkn")]
+position = Vector2(400, 500)
+
+[node name="WallV4" parent="." instance=ExtResource("3_1dvkn")]
+position = Vector2(400, 600)
+
+[node name="WallL" parent="." instance=ExtResource("4_yk1i1")]
+position = Vector2(400, 700)
+
+[node name="WallH2" parent="." instance=ExtResource("5_tw5c3")]
+position = Vector2(500, 700)
+
+[node name="WallH3" parent="." instance=ExtResource("5_tw5c3")]
+position = Vector2(600, 700)
+
+[node name="WallH4" parent="." instance=ExtResource("5_tw5c3")]
+position = Vector2(700, 700)
+
+[node name="WallH5" parent="." instance=ExtResource("5_tw5c3")]
+position = Vector2(800, 700)
+
+[node name="WallH6" parent="." instance=ExtResource("5_tw5c3")]
+position = Vector2(900, 700)
+
+[node name="WallH7" parent="." instance=ExtResource("5_tw5c3")]
+position = Vector2(1000, 700)
+
+[node name="WallH8" parent="." groups=["Door"] instance=ExtResource("1_xfyel")]
+position = Vector2(1100, 700)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 500.0
+offset_top = 500.0
+offset_right = 1098.0
+offset_bottom = 536.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_font_sizes/font_size = 28
+text = "Your Greed will be your undoing \"Pumkin Essie\""
+
+[node name="Lawnmower" parent="." instance=ExtResource("7_np3ob")]
+position = Vector2(1100, 600)
+rotation = 1.5708
+mode = 2
+
+[node name="Lawnmower2" parent="." instance=ExtResource("7_np3ob")]
+position = Vector2(1100, 800)
+rotation = -1.5708
+mode = 2

@@ -1,0 +1,21 @@
+[gd_scene load_steps=5 format=3 uid="uid://dyrt5xlb8bt2s"]
+
+[ext_resource type="PackedScene" uid="uid://c28wo8kb28rs5" path="res://floors/EmptyFloors/empty_wall_1.tscn" id="1_j1sfb"]
+[ext_resource type="PackedScene" uid="uid://b8jg85xquocal" path="res://floors/EmptyFloors/empty_wall_h.tscn" id="2_q56up"]
+[ext_resource type="PackedScene" uid="uid://cank4h7acgemy" path="res://leave_arrow.tscn" id="3_8e42h"]
+[ext_resource type="Script" path="res://Scropts/leave_arrow.gd" id="4_oqmd7"]
+
+[node name="DoorOpen" type="Node2D"]
+
+[node name="WallH2" parent="." instance=ExtResource("1_j1sfb")]
+rotation = -4.7124
+
+[node name="WallH" parent="." instance=ExtResource("2_q56up")]
+position = Vector2(-100, 0)
+
+[node name="LeaveArrow" parent="WallH" instance=ExtResource("3_8e42h")]
+position = Vector2(-3.42529e-06, -2)
+rotation = 4.7124
+collision_layer = 8
+collision_mask = 2
+script = ExtResource("4_oqmd7")

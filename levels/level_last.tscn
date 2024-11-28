@@ -1,0 +1,121 @@
+[gd_scene load_steps=8 format=3 uid="uid://doyvm0cjtongx"]
+
+[ext_resource type="PackedScene" uid="uid://dtvm4uxkjcder" path="res://Player.tscn" id="1_wpwc6"]
+[ext_resource type="PackedScene" uid="uid://wvsyvj3tuhwb" path="res://floors_old/floor.tscn" id="2_ynej8"]
+[ext_resource type="PackedScene" uid="uid://b8jg85xquocal" path="res://floors_old/EmptyFloors/empty_wall_h.tscn" id="3_hi62l"]
+[ext_resource type="PackedScene" uid="uid://cr0fo17eaqltm" path="res://floors_old/EmptyFloors/empty_wall_v.tscn" id="4_vibsb"]
+[ext_resource type="PackedScene" uid="uid://jp3aj7mhp7xr" path="res://floors_old/wall_l.tscn" id="5_g456g"]
+[ext_resource type="PackedScene" uid="uid://cjqt41et4qa45" path="res://floors_old/EmptyFloors/empty_wall_end.tscn" id="6_hu5bm"]
+[ext_resource type="PackedScene" uid="uid://d1rkwatxx2ohi" path="res://lawnmower.tscn" id="7_hf4j3"]
+
+[node name="Level5" type="Node2D"]
+
+[node name="Walls" type="Node2D" parent="."]
+position = Vector2(100, 200)
+
+[node name="Floor" parent="Walls" instance=ExtResource("2_ynej8")]
+position = Vector2(250, 150)
+
+[node name="WallH" parent="Walls" instance=ExtResource("3_hi62l")]
+position = Vector2(400, 200)
+
+[node name="WallH2" parent="Walls" instance=ExtResource("3_hi62l")]
+position = Vector2(200, 200)
+
+[node name="WallH3" parent="Walls" instance=ExtResource("3_hi62l")]
+position = Vector2(500, 200)
+
+[node name="WallH4" parent="Walls" instance=ExtResource("3_hi62l")]
+position = Vector2(100, 200)
+
+[node name="WallV" parent="Walls" instance=ExtResource("4_vibsb")]
+position = Vector2(300, 100)
+
+[node name="WallV2" parent="Walls" instance=ExtResource("4_vibsb")]
+position = Vector2(300, 300)
+
+[node name="WallV3" parent="Walls" instance=ExtResource("4_vibsb")]
+position = Vector2(300, 400)
+
+[node name="WallV4" parent="Walls" instance=ExtResource("4_vibsb")]
+position = Vector2(300, 0)
+
+[node name="WallL" parent="Walls" instance=ExtResource("5_g456g")]
+position = Vector2(800, 400)
+
+[node name="WallL2" parent="Walls" instance=ExtResource("5_g456g")]
+position = Vector2(800, 300)
+rotation = 1.5708
+
+[node name="WallL3" parent="Walls" instance=ExtResource("5_g456g")]
+position = Vector2(900, 300)
+rotation = 3.14159
+
+[node name="WallL4" parent="Walls" instance=ExtResource("5_g456g")]
+position = Vector2(900, 400)
+rotation = -1.5708
+
+[node name="WallH5" parent="Walls" instance=ExtResource("6_hu5bm")]
+position = Vector2(0, 200)
+rotation = -3.14159
+
+[node name="WallH6" parent="Walls" instance=ExtResource("6_hu5bm")]
+position = Vector2(300, 500)
+rotation = 1.5708
+
+[node name="WallH7" parent="Walls" instance=ExtResource("6_hu5bm")]
+position = Vector2(600, 200)
+
+[node name="WallH8" parent="Walls" instance=ExtResource("6_hu5bm")]
+position = Vector2(300, -100)
+rotation = -1.5708
+
+[node name="Player" parent="." instance=ExtResource("1_wpwc6")]
+unique_name_in_owner = true
+position = Vector2(400, 400)
+safe_margin = 0.001
+
+[node name="Lawnmower" parent="." instance=ExtResource("7_hf4j3")]
+position = Vector2(200, 400)
+
+[node name="Lawnmower2" parent="." instance=ExtResource("7_hf4j3")]
+position = Vector2(400, 100)
+rotation = 1.5708
+
+[node name="Lawnmower3" parent="." instance=ExtResource("7_hf4j3")]
+position = Vector2(700, 400)
+rotation = 3.1416
+
+[node name="Lawnmower4" parent="." instance=ExtResource("7_hf4j3")]
+position = Vector2(400, 500)
+rotation = -1.5708
+
+[node name="Label" type="Label" parent="."]
+offset_left = 50.0
+offset_top = 100.0
+offset_right = 290.0
+offset_bottom = 261.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/font_size = 117
+text = "BAD"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 500.0
+offset_top = 100.0
+offset_right = 740.0
+offset_bottom = 261.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 25
+theme_override_font_sizes/font_size = 117
+text = "END"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 61.0
+offset_top = 460.0
+offset_right = 361.0
+offset_bottom = 499.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_font_sizes/font_size = 28
+text = "Thanks for playing!"

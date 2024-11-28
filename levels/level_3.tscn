@@ -1,0 +1,274 @@
+[gd_scene load_steps=13 format=3 uid="uid://c7h4bddy8re1e"]
+
+[ext_resource type="PackedScene" uid="uid://dtvm4uxkjcder" path="res://Player.tscn" id="1_7hv61"]
+[ext_resource type="PackedScene" uid="uid://jp3aj7mhp7xr" path="res://floors/wall_l.tscn" id="4_dh4ew"]
+[ext_resource type="PackedScene" uid="uid://wvsyvj3tuhwb" path="res://floors/floor.tscn" id="5_3cuvk"]
+[ext_resource type="PackedScene" uid="uid://sr38idotq4mn" path="res://floors/wall_h.tscn" id="6_rjxvh"]
+[ext_resource type="PackedScene" uid="uid://cr0fo17eaqltm" path="res://floors/EmptyFloors/empty_wall_v.tscn" id="7_7c734"]
+[ext_resource type="PackedScene" uid="uid://uwu485gbawly" path="res://floors/wall_v.tscn" id="7_gah1r"]
+[ext_resource type="PackedScene" uid="uid://upqp6dlgjtjq" path="res://floors/EmptyFloors/empty_wall_l.tscn" id="8_tvfgs"]
+[ext_resource type="PackedScene" uid="uid://b8jg85xquocal" path="res://floors/EmptyFloors/empty_wall_h.tscn" id="9_ijp2d"]
+[ext_resource type="PackedScene" uid="uid://b4klga03s2olr" path="res://floors/wall_1.tscn" id="10_6kslt"]
+[ext_resource type="PackedScene" uid="uid://c28wo8kb28rs5" path="res://floors/EmptyFloors/empty_wall_1.tscn" id="11_426ox"]
+[ext_resource type="PackedScene" uid="uid://d1rkwatxx2ohi" path="res://lawnmower.tscn" id="11_iqcw3"]
+[ext_resource type="SpriteFrames" uid="uid://c4ka21ixwdm3a" path="res://images/houses.tres" id="12_oini2"]
+
+[node name="Level3" type="Node2D"]
+
+[node name="Walls" type="Node2D" parent="."]
+position = Vector2(500, 100)
+
+[node name="WallV2" parent="Walls" instance=ExtResource("7_gah1r")]
+position = Vector2(-200, 300)
+
+[node name="WallL" parent="Walls" instance=ExtResource("4_dh4ew")]
+position = Vector2(-200, 400)
+
+[node name="WallL2" parent="Walls" instance=ExtResource("4_dh4ew")]
+position = Vector2(-100, 600)
+rotation = -1.5708
+
+[node name="WallL3" parent="Walls" instance=ExtResource("4_dh4ew")]
+position = Vector2(-200, 800)
+
+[node name="WallH4" parent="Walls" instance=ExtResource("6_rjxvh")]
+position = Vector2(-100, 800)
+
+[node name="WallH5" parent="Walls" instance=ExtResource("6_rjxvh")]
+position = Vector2(0, 800)
+
+[node name="WallH6" parent="Walls" instance=ExtResource("6_rjxvh")]
+position = Vector2(0, 200)
+
+[node name="WallL4" parent="Walls" instance=ExtResource("4_dh4ew")]
+position = Vector2(100, 800)
+rotation = -1.5708
+
+[node name="WallV" parent="Walls" instance=ExtResource("7_gah1r")]
+position = Vector2(100, 700)
+
+[node name="WallH7" parent="Walls" instance=ExtResource("6_rjxvh")]
+position = Vector2(200, 600)
+
+[node name="WallH9" parent="Walls" instance=ExtResource("6_rjxvh")]
+position = Vector2(400, 600)
+
+[node name="WallH12" parent="Walls" instance=ExtResource("6_rjxvh")]
+position = Vector2(700, 600)
+
+[node name="Floor" parent="Walls" instance=ExtResource("5_3cuvk")]
+position = Vector2(250, 550)
+
+[node name="WallV3" parent="Walls" instance=ExtResource("7_7c734")]
+position = Vector2(300, 500)
+
+[node name="WallV4" parent="Walls" instance=ExtResource("7_7c734")]
+position = Vector2(300, 700)
+
+[node name="WallL5" parent="Walls" instance=ExtResource("8_tvfgs")]
+position = Vector2(300, 800)
+
+[node name="WallH8" parent="Walls" instance=ExtResource("9_ijp2d")]
+position = Vector2(400, 800)
+
+[node name="WallH14" parent="Walls" instance=ExtResource("9_ijp2d")]
+position = Vector2(500, 800)
+
+[node name="WallH15" parent="Walls" instance=ExtResource("9_ijp2d")]
+position = Vector2(600, 800)
+
+[node name="WallH16" parent="Walls" instance=ExtResource("9_ijp2d")]
+position = Vector2(700, 800)
+
+[node name="WallL6" parent="Walls" instance=ExtResource("8_tvfgs")]
+position = Vector2(800, 800)
+rotation = -1.5708
+
+[node name="WallV5" parent="Walls" instance=ExtResource("7_7c734")]
+position = Vector2(800, 700)
+
+[node name="WallL7" parent="Walls" instance=ExtResource("4_dh4ew")]
+position = Vector2(1000, 600)
+rotation = -1.5708
+
+[node name="WallV6" parent="Walls" instance=ExtResource("7_gah1r")]
+position = Vector2(1000, 500)
+
+[node name="WallV7" parent="Walls" instance=ExtResource("7_gah1r")]
+position = Vector2(1000, 400)
+
+[node name="WallH13" parent="Walls" instance=ExtResource("6_rjxvh")]
+position = Vector2(900, 600)
+
+[node name="WallV8" parent="Walls" instance=ExtResource("7_7c734")]
+position = Vector2(800, 500)
+
+[node name="WallV9" parent="Walls" groups=["Door"] instance=ExtResource("7_7c734")]
+position = Vector2(300, 400)
+
+[node name="WallV10" parent="Walls" instance=ExtResource("7_7c734")]
+position = Vector2(800, 400)
+
+[node name="WallV11" parent="Walls" instance=ExtResource("7_7c734")]
+position = Vector2(300, 300)
+
+[node name="WallL8" parent="Walls" instance=ExtResource("8_tvfgs")]
+position = Vector2(800, 0)
+rotation = 3.14159
+
+[node name="WallH17" parent="Walls" instance=ExtResource("9_ijp2d")]
+position = Vector2(400, 0)
+
+[node name="WallH18" parent="Walls" instance=ExtResource("9_ijp2d")]
+position = Vector2(500, 0)
+
+[node name="WallH19" parent="Walls" instance=ExtResource("9_ijp2d")]
+position = Vector2(600, 0)
+
+[node name="WallH20" parent="Walls" instance=ExtResource("9_ijp2d")]
+position = Vector2(700, 0)
+
+[node name="WallV13" parent="Walls" instance=ExtResource("7_7c734")]
+position = Vector2(300, 100)
+
+[node name="WallV14" parent="Walls" instance=ExtResource("7_7c734")]
+position = Vector2(800, 100)
+
+[node name="WallH21" parent="Walls" instance=ExtResource("6_rjxvh")]
+position = Vector2(100, 200)
+
+[node name="WallH22" parent="Walls" instance=ExtResource("6_rjxvh")]
+position = Vector2(200, 200)
+
+[node name="WallH23" parent="Walls" instance=ExtResource("6_rjxvh")]
+position = Vector2(400, 200)
+
+[node name="WallV15" parent="Walls" instance=ExtResource("7_gah1r")]
+position = Vector2(1000, 300)
+
+[node name="WallH24" parent="Walls" instance=ExtResource("6_rjxvh")]
+position = Vector2(900, 200)
+
+[node name="WallH" parent="Walls" instance=ExtResource("6_rjxvh")]
+position = Vector2(-100, 200)
+
+[node name="WallL10" parent="Walls" instance=ExtResource("4_dh4ew")]
+position = Vector2(500, 200)
+rotation = 3.14159
+
+[node name="WallL11" parent="Walls" instance=ExtResource("4_dh4ew")]
+position = Vector2(500, 300)
+
+[node name="WallL13" parent="Walls" instance=ExtResource("4_dh4ew")]
+position = Vector2(600, 500)
+rotation = 3.14159
+
+[node name="WallL14" parent="Walls" instance=ExtResource("4_dh4ew")]
+position = Vector2(-200, 200)
+rotation = 1.5708
+
+[node name="WallL15" parent="Walls" instance=ExtResource("4_dh4ew")]
+position = Vector2(-200, 600)
+rotation = 1.5708
+
+[node name="WallL16" parent="Walls" instance=ExtResource("4_dh4ew")]
+position = Vector2(-100, 400)
+rotation = -3.14159
+
+[node name="WallL17" parent="Walls" instance=ExtResource("4_dh4ew")]
+position = Vector2(100, 600)
+rotation = 1.5708
+
+[node name="WallL18" parent="Walls" instance=ExtResource("8_tvfgs")]
+position = Vector2(300, 0)
+rotation = 1.5708
+
+[node name="WallL19" parent="Walls" instance=ExtResource("4_dh4ew")]
+position = Vector2(1000, 200)
+rotation = -3.14159
+
+[node name="WallL20" parent="Walls" instance=ExtResource("4_dh4ew")]
+position = Vector2(500, 500)
+rotation = 1.5708
+
+[node name="WallH10" parent="Walls" instance=ExtResource("10_6kslt")]
+position = Vector2(500, 600)
+rotation = 1.5708
+
+[node name="WallH11" parent="Walls" instance=ExtResource("10_6kslt")]
+position = Vector2(600, 600)
+rotation = 1.5708
+
+[node name="WallL9" parent="Walls" instance=ExtResource("4_dh4ew")]
+position = Vector2(700, 200)
+rotation = 1.5708
+
+[node name="WallH25" parent="Walls" instance=ExtResource("11_426ox")]
+position = Vector2(800, 300)
+
+[node name="WallH26" parent="Walls" instance=ExtResource("10_6kslt")]
+position = Vector2(700, 300)
+rotation = 1.5708
+
+[node name="WallH27" parent="Walls" instance=ExtResource("6_rjxvh")]
+position = Vector2(600, 300)
+
+[node name="WallV12" parent="Walls" instance=ExtResource("7_gah1r")]
+position = Vector2(-200, 700)
+
+[node name="WallV16" parent="Walls" instance=ExtResource("7_gah1r")]
+position = Vector2(-100, 500)
+
+[node name="Floor2" parent="Walls" instance=ExtResource("5_3cuvk")]
+position = Vector2(750, 550)
+
+[node name="Floor4" parent="Walls" instance=ExtResource("5_3cuvk")]
+position = Vector2(750, 150)
+
+[node name="Floor3" parent="Walls" instance=ExtResource("5_3cuvk")]
+position = Vector2(250, 150)
+
+[node name="Player" parent="." instance=ExtResource("1_7hv61")]
+unique_name_in_owner = true
+z_index = 2
+position = Vector2(300, 400)
+safe_margin = 0.001
+
+[node name="Lawnmower" parent="." instance=ExtResource("11_iqcw3")]
+position = Vector2(800, 100)
+
+[node name="Lawnmower2" parent="." instance=ExtResource("11_iqcw3")]
+position = Vector2(1300, 900)
+rotation = -3.14159
+
+[node name="Decoration" type="Node2D" parent="."]
+position = Vector2(-100, 0)
+
+[node name="House" type="AnimatedSprite2D" parent="Decoration"]
+position = Vector2(500, 400)
+sprite_frames = ExtResource("12_oini2")
+
+[node name="House2" type="AnimatedSprite2D" parent="Decoration"]
+position = Vector2(1200, 300)
+sprite_frames = ExtResource("12_oini2")
+frame = 1
+
+[node name="House3" type="AnimatedSprite2D" parent="Decoration"]
+position = Vector2(1300, 600)
+sprite_frames = ExtResource("12_oini2")
+frame = 2
+
+[node name="House4" type="AnimatedSprite2D" parent="Decoration"]
+position = Vector2(1000, 600)
+sprite_frames = ExtResource("12_oini2")
+frame = 3
+
+[node name="House5" type="AnimatedSprite2D" parent="Decoration"]
+position = Vector2(500, 800)
+sprite_frames = ExtResource("12_oini2")
+frame = 4
+
+[node name="House6" type="AnimatedSprite2D" parent="Decoration"]
+position = Vector2(1500, 200)
+sprite_frames = ExtResource("12_oini2")
+frame = 5

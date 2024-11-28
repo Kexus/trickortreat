@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://d1rkwatxx2ohi"]
+
+[ext_resource type="Script" path="res://Scropts/lawnmower.gd" id="1_cyq33"]
+[ext_resource type="Texture2D" uid="uid://doexs15uji5w6" path="res://images/Lawn_Mower.webp" id="2_yixex"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o0lou"]
+size = Vector2(80, 80)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_pp82x"]
+size = Vector2(48, 46)
+
+[node name="Lawnmower" type="CharacterBody2D"]
+collision_layer = 128
+script = ExtResource("1_cyq33")
+
+[node name="Sprite" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite"]
+z_index = 2
+position = Vector2(0, -7)
+texture = ExtResource("2_yixex")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 0.5)
+shape = SubResource("RectangleShape2D_o0lou")
+
+[node name="LawnmowerKillbox" type="Area2D" parent="."]
+collision_layer = 16
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="LawnmowerKillbox"]
+position = Vector2(-10, 0)
+shape = SubResource("RectangleShape2D_pp82x")

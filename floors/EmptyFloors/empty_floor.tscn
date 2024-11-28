@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://cr1e7b6cvc514"]
+
+[ext_resource type="SpriteFrames" uid="uid://cgtynm3f5rwh6" path="res://tiles.tres" id="1_fluit"]
+
+[node name="Floor" type="Polygon2D"]
+position = Vector2(-50, -50)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, 0, 100, 100, 100, 100, 0)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(50, 50)
+sprite_frames = ExtResource("1_fluit")
+frame = 14
+speed_scale = 0.0

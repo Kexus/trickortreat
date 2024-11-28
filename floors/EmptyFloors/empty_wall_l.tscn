@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=3 uid="uid://upqp6dlgjtjq"]
+
+[ext_resource type="SpriteFrames" uid="uid://cgtynm3f5rwh6" path="res://tiles.tres" id="1_qpiff"]
+[ext_resource type="Script" path="res://floors/reorienter.gd" id="2_uwbei"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3kfed"]
+size = Vector2(0.499893, 100)
+
+[node name="WallL" type="StaticBody2D" groups=["WallL"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-50.5, 0)
+shape = SubResource("RectangleShape2D_3kfed")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-3.3842e-07, 50.25)
+rotation = 1.57079
+shape = SubResource("RectangleShape2D_3kfed")
+
+[node name="Floor" type="Polygon2D" parent="."]
+position = Vector2(-50, -50)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, 0, 100, 100, 100, 100, 0)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_qpiff")
+script = ExtResource("2_uwbei")

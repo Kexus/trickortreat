@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://wvsyvj3tuhwb"]
+
+[ext_resource type="PackedScene" uid="uid://b4xmadyemigen" path="res://pickup.tscn" id="1_i3guj"]
+[ext_resource type="SpriteFrames" uid="uid://cgtynm3f5rwh6" path="res://tiles.tres" id="2_53j10"]
+
+[node name="Floor" type="Polygon2D"]
+position = Vector2(-50, -50)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, 0, 100, 100, 100, 100, 0)
+
+[node name="Pickup" parent="." instance=ExtResource("1_i3guj")]
+position = Vector2(49, 50)
+collision_layer = 4
+collision_mask = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(50, 50)
+sprite_frames = ExtResource("2_53j10")
+frame = 14

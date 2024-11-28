@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://cr0fo17eaqltm"]
+
+[ext_resource type="SpriteFrames" uid="uid://cgtynm3f5rwh6" path="res://tiles.tres" id="1_ptpxn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3kfed"]
+size = Vector2(1, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gg25y"]
+size = Vector2(1, 100)
+
+[node name="WallV" type="StaticBody2D" groups=["WallV"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-50.5, 0)
+shape = SubResource("RectangleShape2D_3kfed")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(50.5, -2.40842e-05)
+rotation = -3.14159
+shape = SubResource("RectangleShape2D_gg25y")
+
+[node name="Floor" type="Polygon2D" parent="."]
+position = Vector2(-50, -50)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, 0, 100, 100, 100, 100, 0)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("1_ptpxn")
+frame = 5
+speed_scale = 0.0

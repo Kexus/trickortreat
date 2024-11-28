@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://sr38idotq4mn"]
+
+[ext_resource type="PackedScene" uid="uid://b4xmadyemigen" path="res://pickup.tscn" id="1_442ix"]
+[ext_resource type="SpriteFrames" uid="uid://cgtynm3f5rwh6" path="res://tiles.tres" id="2_ffthq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3kfed"]
+size = Vector2(1.5, 100)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gg25y"]
+size = Vector2(1.00001, 100)
+
+[node name="WallH" type="StaticBody2D" groups=["WallH"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3.52949e-05, -50.25)
+rotation = 1.5708
+shape = SubResource("RectangleShape2D_3kfed")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(-3.43899e-05, 50.5)
+rotation = -1.5708
+shape = SubResource("RectangleShape2D_gg25y")
+
+[node name="Floor" type="Polygon2D" parent="."]
+position = Vector2(-50, -50)
+color = Color(0, 0, 0, 1)
+polygon = PackedVector2Array(0, 0, 0, 100, 100, 100, 100, 0)
+
+[node name="Pickup" parent="." instance=ExtResource("1_442ix")]
+collision_layer = 4
+collision_mask = 2
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = ExtResource("2_ffthq")
+frame = 4

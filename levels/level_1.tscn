@@ -1,0 +1,101 @@
+[gd_scene load_steps=7 format=3 uid="uid://4h12mcnnr3y8"]
+
+[ext_resource type="PackedScene" uid="uid://jp3aj7mhp7xr" path="res://floors_old/wall_l.tscn" id="2_km1t2"]
+[ext_resource type="PackedScene" uid="uid://sr38idotq4mn" path="res://floors_old/wall_h.tscn" id="3_c25qm"]
+[ext_resource type="PackedScene" uid="uid://uwu485gbawly" path="res://floors_old/wall_v.tscn" id="4_45f5l"]
+[ext_resource type="PackedScene" uid="uid://wvsyvj3tuhwb" path="res://floors_old/floor.tscn" id="5_7kahj"]
+[ext_resource type="PackedScene" uid="uid://dtvm4uxkjcder" path="res://Player.tscn" id="6_3lryc"]
+[ext_resource type="SpriteFrames" uid="uid://c4ka21ixwdm3a" path="res://images/houses.tres" id="6_rykf7"]
+
+[node name="Level1" type="Node2D"]
+
+[node name="Walls" type="Node2D" parent="."]
+position = Vector2(600, 100)
+
+[node name="WallL" parent="Walls" instance=ExtResource("2_km1t2")]
+position = Vector2(0, 200)
+
+[node name="WallH" parent="Walls" instance=ExtResource("3_c25qm")]
+position = Vector2(100, 0)
+
+[node name="WallV" parent="Walls" instance=ExtResource("4_45f5l")]
+position = Vector2(0, 100)
+
+[node name="WallH2" parent="Walls" instance=ExtResource("3_c25qm")]
+position = Vector2(100, 200)
+
+[node name="Floor" parent="Walls" instance=ExtResource("5_7kahj")]
+position = Vector2(150, 150)
+
+[node name="WallV2" parent="Walls" instance=ExtResource("4_45f5l")]
+position = Vector2(200, 100)
+
+[node name="WallH3" parent="Walls" instance=ExtResource("3_c25qm")]
+position = Vector2(300, 200)
+
+[node name="WallV3" parent="Walls" instance=ExtResource("4_45f5l")]
+position = Vector2(200, 300)
+
+[node name="WallL2" parent="Walls" instance=ExtResource("2_km1t2")]
+position = Vector2(200, 400)
+
+[node name="WallH4" parent="Walls" instance=ExtResource("3_c25qm")]
+position = Vector2(300, 400)
+
+[node name="WallL3" parent="Walls" instance=ExtResource("2_km1t2")]
+position = Vector2(400, 400)
+rotation = -1.5708
+
+[node name="WallV4" parent="Walls" groups=["Door"] instance=ExtResource("4_45f5l")]
+position = Vector2(400, 300)
+
+[node name="WallL4" parent="Walls" instance=ExtResource("2_km1t2")]
+position = Vector2(400, 200)
+rotation = 3.14159
+
+[node name="WallL5" parent="Walls" instance=ExtResource("2_km1t2")]
+rotation = 1.5708
+
+[node name="WallL6" parent="Walls" instance=ExtResource("2_km1t2")]
+position = Vector2(200, 0)
+rotation = 3.14159
+
+[node name="Player" parent="." instance=ExtResource("6_3lryc")]
+unique_name_in_owner = true
+position = Vector2(800, 300)
+safe_margin = 0.001
+
+[node name="Decor" type="Node2D" parent="."]
+
+[node name="House" type="AnimatedSprite2D" parent="Decor"]
+position = Vector2(700, 200)
+sprite_frames = ExtResource("6_rykf7")
+
+[node name="House2" type="AnimatedSprite2D" parent="Decor"]
+position = Vector2(900, 400)
+sprite_frames = ExtResource("6_rykf7")
+frame = 1
+
+[node name="Label" type="Label" parent="."]
+offset_left = 52.0
+offset_top = 100.0
+offset_right = 696.0
+offset_bottom = 181.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_font_sizes/font_size = 28
+text = "Baachis! Pumkin Essie needs 
+YOUR help to go Trick or Treating!
+
+Type \"up\", \"down\", \"left\" or \"right\"
+in Twitch chat to guide her!"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 47.0
+offset_top = 323.0
+offset_right = 691.0
+offset_bottom = 404.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 9
+theme_override_font_sizes/font_size = 14
+text = "(sorry Youtube baachis)"
